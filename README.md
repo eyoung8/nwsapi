@@ -12,6 +12,8 @@ The script looks up location info using an IP lookup of your public IP from ipin
 
 # National Weather Service API
 
+Docs: https://www.weather.gov/documentation/services-web-api
+
 The script then looks up the location grid ID from the national weather service. This request returns a response that includes a URL to call to get forecast data for that grid ID. The script then calls this and prints part of that response:
 
 ````
