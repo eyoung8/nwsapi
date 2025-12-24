@@ -4,20 +4,29 @@ Python script that calls the national weather service API
 
 # Running
 
-`python3 nwsapi.py`
-
-# IP location lookup
-
-The script looks up location info using an IP lookup of your public IP from ipinfo.io
-
-# National Weather Service API
-
-Docs: https://www.weather.gov/documentation/services-web-api
-
-The script then looks up the location grid ID from the national weather service. This request returns a response that includes a URL to call to get forecast data for that grid ID. The script then calls this and prints part of that response:
+Simply run the script with `python3`
 
 ````
+python3 nwsapi.py
 You are in Atlanta, Georgia
 Latitude: 33.749, Longitude: -84.388
 Mostly sunny, with a high near 73. Northwest wind 5 to 10 mph.
 ````
+
+# How it works
+
+## IP location lookup
+
+The script looks up location info using an IP lookup of your public IP from ipinfo.io
+
+## National Weather Service API
+
+Docs: https://www.weather.gov/documentation/services-web-api
+
+The script then looks up the location grid ID from the national weather service. This request returns a response that includes a URL to call to get forecast data for that grid ID. The script then calls this URL to get the forecast data which includes data for right now, later in the day, and the next several days of forecast information.
+
+## Output
+
+The script outputs the city information as well as the "detailed forecast" response for right now. The detailed forecast is a human readable description of the weather.
+
+
