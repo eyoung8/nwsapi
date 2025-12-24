@@ -1,5 +1,5 @@
 import requests
-import json
+# import json
 from requests.exceptions import HTTPError, Timeout, RequestException
 
 def make_nws_request(endpoint, user_agent):
@@ -102,5 +102,7 @@ if __name__ == "__main__":
     print(f"Latitude: {lat}, Longitude: {lon}")
     print(detailed_forecast)
 
-    json_data = json.dumps(forecast_data, indent=4)
-    print(json_data)
+# The below commented out code prints the full forecast_data request
+# To print it uncomment out the json library import and the below lines
+#    json_data = json.dumps(forecast_data, indent=4)
+#    print(json_data)
